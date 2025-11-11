@@ -87,7 +87,7 @@ const BEDCalculator = () => {
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/calculate_BED', requestData);
+      const response = await axios.post('https://bed-app1.onrender.com/calculate_BED', requestData);
       const { BED, A9, rel_diff, warning } = response.data;
 
       setBed(BED.toFixed(2) + ' Gy');
